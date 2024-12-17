@@ -15,7 +15,7 @@ process.on("SIGTERM", () => {
 
     app.get('/', (req, res) => {
         console.log("Got a request");
-        res.json({ message: "Hey, I'm Tom, the API" });
+        res.json({ message: "Hey, I'm Tom, the APIIIIII" });
     });
 
     app.listen(5000, () => {

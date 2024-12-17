@@ -1,9 +1,13 @@
 FROM node:lts-alpine
-RUN mkdir /app
-WORKDIR /app
-COPY package*.json ./
-COPY public/ ./
-RUN npm i
-COPY src src
-CMD npm run dev
 
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install
+
+COPY vite.config.js vite.config.js
+COPY index.html index.html
+COPY src src
+COPY public public
+
+CMD npm run dev
